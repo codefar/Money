@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello android-quickstart!</string>
+    <string name="app_name">Syd</string>
+    <string name="call_log_type_missed">未接</string>
+    <string name="call_log_type_incoming">呼入</string>
+    <string name="call_log_type_outgoing">呼出</string>
+    <string name="message_type_inbox">收件箱</string>
+    <string name="message_type_sent">已发送</string>
+    <string name="message_type_draft">草稿箱</string>
+    <string name="message_type_outbox">发件箱</string>
+    <string name="message_type_failed">发送失败</string>
+    <string name="message_type_queued">待发送</string>
+    <string name="unknown">未知</string>
+</resources>
