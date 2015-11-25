@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="button_main_default">#178FFE</color>
+    <color name="button_main_pressed">#1580E4</color>
+    <color name="button_main_disable">#DEDEDE</color>
+    <color name="divider">#DEDEDE</color>
+    
+    <color name="button_green_default">#178FFE</color>
+    <color name="button_green_pressed">#49C91A</color>
+    <color name="button_green_disable">#DEDEDE</color>
+
+    <color name="tab_select">#178ffe</color>
+    <color name="tab_normal">#666666</color>
+    <color name="tab_bg">#fafafa</color>
+
+    <color name="first_text">#333333</color>
+    <color name="second_text">#666666</color>
+    <color name="third_text">#999999</color>
+    <color name="radio_button_selected_color">#333333</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+
+    <color name="warning">#EE5930</color>
+    <color name="action_bar_bg">#178FFE</color>
+    <color name="line_divider">#1580E4</color>
+    <color name="share_bg_transparent">#50000000</color>
+	<color name="about_content">#666666</color>
+	<color name="announcement_divider">#DBDBDB</color>
+    <color name="announcement_bg">#FFF4D6</color>
+    <color name="my_account_preference_title">#333333</color>
+    <color name="my_account_preference_bg_pressed">#0D000000</color>
+</resources>

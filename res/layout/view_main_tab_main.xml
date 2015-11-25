@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/main_tab_main"
+        android:textColor="@drawable/tab_text_selector"
+        android:text="首页"
+        android:drawablePadding="@dimen/dimen_1_dip"
+		android:textSize="@dimen/dimen_8_dip"
+        android:gravity="center"
+        android:layout_gravity="center"
+        ></TextView>
+</FrameLayout>
