@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="gesture_requested_minimum_password_length">0</integer>
+    <integer name="gesture_requested_password_quality">0</integer>
+    <integer name="pattern_max_attempt_times">5</integer>
+</resources>

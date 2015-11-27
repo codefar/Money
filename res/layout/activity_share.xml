@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="bottom"
+              android:background="@color/white"
+              android:id="@+id/layout">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_26_dip"
+            android:layout_marginBottom="@dimen/dimen_26_dip"
+            android:text="分享给朋友"
+            android:textSize="@dimen/dimen_17_dip"
+            android:textColor="@color/gray_bg"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title"/>
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/title"
+            android:paddingLeft="@dimen/dimen_26_dip"
+            android:paddingRight="@dimen/dimen_26_dip"
+            android:id="@+id/share_list"/>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_54_dip"
+            android:layout_marginTop="@dimen/dimen_26_dip"
+            android:paddingRight="@dimen/dimen_11_dip"
+            android:paddingLeft="@dimen/dimen_11_dip"
+            android:layout_below="@id/share_list"
+            android:id="@+id/button_layout">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_43_dip"
+                android:text="@string/cancel"
+                android:textSize="@dimen/dimen_14_dip"
+                android:textColor="@color/gray_bg"
+                android:includeFontPadding="false"
+                android:id="@+id/cancel"
+                android:layout_gravity="center"/>
+    </FrameLayout>
+    <View android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/title" android:id="@+id/space_holder"/>
+</RelativeLayout>

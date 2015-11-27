@@ -5,10 +5,10 @@
     android:orientation="vertical" >
 
     <FrameLayout
-        android:id="@+id/realtabcontent"
+        android:id="@+id/main_layout"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
 
     <android.support.v13.app.FragmentTabHost
         android:id="@android:id/tabhost"

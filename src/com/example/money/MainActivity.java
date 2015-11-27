@@ -47,7 +47,7 @@ public class MainActivity extends FragmentActivity {
 
 	private void initTabs() {
 		mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-		mTabHost.setup(this, getFragmentManager(), R.id.realtabcontent);
+		mTabHost.setup(this, getFragmentManager(), R.id.main_layout);
 
 		View tab_main = getLayoutInflater().inflate(R.layout.view_main_tab_main, null);
 		View tab_find = getLayoutInflater().inflate(R.layout.view_main_tab_find, null);

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LockPatternView">
+        <attr name="aspect" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SectorRing">
+        <attr name="bgColor" format="color" />
+        <attr name="progressBgColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="ringColor" format="color" />
+        <attr name="ringColorClicked" format="color" />
+        <attr name="remainderColor" format="color" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="progress" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ClearableEditText" >
+        <attr name="android:text"/>
+        <attr name="android:textSize" />
+        <attr name="android:textColor"/>
+        <attr name="android:textColorHint"/>
+        <attr name="android:hint"/>
+        <attr name="unit" format="string" />
+        <attr name="unitColor" format="color" />
+        <attr name="android:inputType"/>
+        <attr name="android:enabled"/>
+    </declare-styleable>
+</resources>
