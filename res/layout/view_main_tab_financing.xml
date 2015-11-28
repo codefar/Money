@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/main_tab_my"
         android:textColor="@drawable/tab_text_selector"
-        android:text="发现"
+        android:text="理财"
         android:drawablePadding="@dimen/dimen_1_dip"
 		android:textSize="@dimen/dimen_8_dip"
         android:layout_gravity="center"

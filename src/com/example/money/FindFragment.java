@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FindnFragment extends Fragment {
+public class FindFragment extends Fragment {
 
-	public FindnFragment() {
+	public FindFragment() {
 	}
 
 	@Override

@@ -10,7 +10,7 @@
         android:layout_gravity="center"
         android:drawablePadding="@dimen/dimen_1_dip"
 		android:textSize="@dimen/dimen_8_dip"
-        android:drawableTop="@drawable/main_tab_find"
+        android:drawableTop="@drawable/main_tab_financing"
         android:gravity="center"
         android:text="我的"
         android:textColor="@drawable/tab_text_selector" >

@@ -50,31 +50,31 @@ public class MainActivity extends FragmentActivity {
 		mTabHost.setup(this, getFragmentManager(), R.id.main_layout);
 
 		View tab_main = getLayoutInflater().inflate(R.layout.view_main_tab_main, null);
-		View tab_find = getLayoutInflater().inflate(R.layout.view_main_tab_find, null);
+		View tab_find = getLayoutInflater().inflate(R.layout.view_main_tab_financing, null);
 		View tab_my = getLayoutInflater().inflate(R.layout.view_main_tab_my, null);
 
 		mTabHost.addTab(mTabHost.newTabSpec("tab_main").setIndicator(tab_main), MainFragment.class, null);
-		mTabHost.addTab(mTabHost.newTabSpec("tab_find").setIndicator(tab_find), FindnFragment.class, null);
+		mTabHost.addTab(mTabHost.newTabSpec("tab_find").setIndicator(tab_find), FindFragment.class, null);
 		mTabHost.addTab(mTabHost.newTabSpec("tab_my").setIndicator(tab_my), MyFragment.class, null);
 
 		mTabHost.getTabWidget().setShowDividers(LinearLayout.SHOW_DIVIDER_NONE);
 		mTabHost.setOnTabChangedListener(new OnTabChangeListener() {
 			@Override
 			public void onTabChanged(String tabId) {
-				ActionBar bar = getActionBar();
-				switch (mTabHost.getCurrentTab()) {
-				case TAB_MAIN:
-					bar.setTitle("首页");
-					break;
-				case TAB_FIND:
-					bar.setTitle("发现");
-					break;
-				case TAB_MY:
-					bar.setTitle("我的");
-					break;
-				default:
-					break;
-				}
+//				ActionBar bar = getActionBar();
+//				switch (mTabHost.getCurrentTab()) {
+//				case TAB_MAIN:
+//					bar.setTitle("首页");
+//					break;
+//				case TAB_FIND:
+//					bar.setTitle("发现");
+//					break;
+//				case TAB_MY:
+//					bar.setTitle("我的");
+//					break;
+//				default:
+//					break;
+//				}
 			}
 		});
 	}
