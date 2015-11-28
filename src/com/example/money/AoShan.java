@@ -31,9 +31,7 @@ public class AoShan extends Application {
     public static final String MOBILE_MD5_SIGN = "j7dAuXMhpE76LRrETe8bTQ";
 
     public static RequestQueue sRequestQueue;
-    public static String sHost;
-    public static String sPassportHost;
-    public static String sPassportRootHost;
+    public static final String HOST = "http://.../"; //TODO 补全host
     public static String sVersionName;
     public static int sVersionCode;
     public static String sPackageName;
@@ -116,9 +114,6 @@ public class AoShan extends Application {
         super.onCreate();
 
         final SharedPreferences defaultSP = PreferenceManager.getDefaultSharedPreferences(this);
-        sHost = defaultSP.getString(Constants.SP_COLUMN_ENVIRONMENT, "https://app.souyidai.com/app/");
-        sPassportHost = "https://passport.souyidai.com/app/";
-        sPassportRootHost = "https://passport.souyidai.com/";
 //        AppHelper.getNewHttpClient();
 
         sRequestQueue = Volley.newRequestQueue(this);

@@ -329,7 +329,7 @@ public class DownloadService extends IntentService {
     }
 
     private void checkVersion(final boolean autoDownload, final boolean showDialog) {
-        String jsonDataUrl = AoShan.sHost + Url.VERSION_CHECK_SUFFIX
+        String jsonDataUrl = AoShan.HOST + Url.VERSION_CHECK_SUFFIX
                 + "?version=" + AoShan.sVersionName
                 + "&versionCode=" + AoShan.sVersionCode
                 + "&appType=" + Constants.APP_TYPE
