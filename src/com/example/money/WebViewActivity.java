@@ -86,7 +86,7 @@ public class WebViewActivity extends CommonBaseActivity implements View.OnClickL
         addContentView(progressbar, lp);
 
         WebSettings webSettings = mWebView.getSettings();
-        webSettings.setUserAgentString(webSettings.getUserAgentString() + " souyidai " + AoShan.sVersionCode);
+        webSettings.setUserAgentString(webSettings.getUserAgentString() + " aoshan " + AoShan.sVersionCode);
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
@@ -167,7 +167,7 @@ public class WebViewActivity extends CommonBaseActivity implements View.OnClickL
             CookieSyncManager.createInstance(this);
             CookieManager cookieManager = CookieManager.getInstance();
             cookieManager.setAcceptCookie(true);
-            String domain = ".souyidai.com";
+            String domain = ".aoshan.com";
             String cookie = "syd_auth_verify=" + user.getId() + "|" + user.getToken() + ";domain=" + domain + ";" + "path=/";
             cookieManager.setCookie(url, cookie);
             CookieSyncManager.getInstance().sync();

@@ -332,11 +332,8 @@ public class DownloadService extends IntentService {
         String jsonDataUrl = AoShan.HOST + Url.VERSION_CHECK_SUFFIX
                 + "?version=" + AoShan.sVersionName
                 + "&versionCode=" + AoShan.sVersionCode
-                + "&appType=" + Constants.APP_TYPE
-                + "&appId=" + Constants.APP_ID
                 + "&appName=" + getPackageName()
-                + "&sdkInt=" + Build.VERSION.SDK_INT
-                + "&promotionId=" + Constants.PROMOTION_ID;
+                + "&sdkInt=" + Build.VERSION.SDK_INT;
         FastJsonRequest jsonObjectRequest = new FastJsonRequest(Request.Method.GET, jsonDataUrl, null,
                 new Response.Listener<com.alibaba.fastjson.JSONObject>() {
                     @Override
@@ -436,12 +433,12 @@ public class DownloadService extends IntentService {
         Intent intent = new Intent(DownloadService.ACTION_DOWNLOAD_WITH_DOWNLOAD_MANAGER);
         intent.putExtra("url", sp.getString(AoShan.SP_COLUMN_NEW_VERSION_URL, ""));
         intent.putExtra("version", sp.getString(AoShan.SP_COLUMN_NEW_VERSION, ""));
-        intent.putExtra("file_name", "souyidai" + sp.getString(AoShan.SP_COLUMN_NEW_VERSION, "") + ".apk");
+        intent.putExtra("file_name", "aoshan" + sp.getString(AoShan.SP_COLUMN_NEW_VERSION, "") + ".apk");
         return intent;
     }
 
     public static String getNewApkName(String version) {
-        return "souyidai" + version + ".apk";
+        return "aoshan" + version + ".apk";
     }
 
     public interface DownloadListener {

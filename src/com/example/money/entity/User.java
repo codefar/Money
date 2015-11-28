@@ -1,18 +1,18 @@
 package com.example.money.entity;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.Date;
+
+import com.example.money.AoShan;
+import com.example.money.Constants;
+import com.example.money.common.AppHelper;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
-import com.example.money.Constants;
-import com.example.money.AoShan;
-import com.example.money.common.AppHelper;
-
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.Date;
 
 /**
  * Created by su on 2014/6/12.
@@ -271,7 +271,6 @@ public class User {
                 .putLong(Constants.SP_COLUMN_USER_LOGIN_TIME, -1)
 //                .putLong(Constants.SP_COLUMN_DEFAULT_TRANSACTION_AMOUNT, context.getResources().getInteger(R.integer.default_transaction_amount))
                 .putLong(Constants.SP_COLUMN_USER_EXPIRE_TIME, -1)
-                .putBoolean(Constants.SP_COLUMN_USER_BIND_JPUSH, false)
 //                .putBoolean(Constants.SP_COLUMN_PATTERN_PASSWORD_ENABLE, false)
                 .putInt(Constants.SP_COLUMN_REAL_NAME_AUTHENTICATION_STATUS, 0)
                 .putString(Constants.SP_COLUMN_REAL_NAME, "")
@@ -279,7 +278,6 @@ public class User {
                 .putLong(Constants.SP_COLUMN_WRONG_DATE, System.currentTimeMillis())
                 .putString(Constants.SP_COLUMN_QUESTION_ID, "")
                 .putBoolean(Constants.SP_COLUMN_TRADE_PASSWORD_STATUS, false)
-                .putString(Constants.SP_COLUMN_X_AUTH_TOKEN, "")
                 .putBoolean(Constants.SP_COLUMN_HAS_NEW_MESSAGE, false)
                 .remove(Constants.SP_COLUMN_INVEST_REMIND_INITED_2)
                 .apply();
@@ -299,8 +297,6 @@ public class User {
             Log.w(TAG, "removeAllUserFiles!!");
         }
 //        new File(context.getFilesDir().getAbsolutePath() + "/" + Constants.LOCK_PATTERN_FILE).delete(); //不删除手势密码，以便下次同一用户登录使用
-        new File(context.getFilesDir().getAbsolutePath() + "/" + Constants.FILE_FORMAL_UMENG_FEEDBACK).delete(); //友盟反馈
-        new File(context.getFilesDir().getAbsolutePath() + "/" + Constants.FILE_FORMAL_UMENG_CACHE).delete(); //友盟缓存
     }
 
     private static void clear() {

@@ -1,6 +1,10 @@
 package com.example.money.common;
 
-import android.os.Build;
+import java.net.URI;
+import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.alibaba.fastjson.JSON;
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -10,14 +14,9 @@ import com.android.volley.Response;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.toolbox.HttpHeaderParser;
-import com.example.money.Constants;
 import com.example.money.AoShan;
-import com.example.money.utils.Md5Util;
 
-import java.net.URI;
-import java.nio.charset.Charset;
-import java.util.HashMap;
-import java.util.Map;
+import android.os.Build;
 
 /**
  * Created by su on 2014/9/25.
@@ -51,7 +50,6 @@ public class FastJsonRequest<T> extends Request<T> {
                 + AoShan.sScreenWidth + ";" + AoShan.sScreenHeight + ";" + Build.MANUFACTURER + ";" + Build.MODEL + ";"
                 + AoShan.sVersionCode + ";" + Build.VERSION.SDK_INT + ")");
         URI uri = URI.create(mUrl);
-        mHeaders.put("authToken", Md5Util.md5Hex(Constants.AUTH_TOKEN_SECRET_KEY + uri.getPath()));
         mHeaders.put("deviceId", AoShan.sDeviceId);
         this.mListener = listener;
 

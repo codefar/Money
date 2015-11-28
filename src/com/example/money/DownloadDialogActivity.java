@@ -41,7 +41,7 @@ public class DownloadDialogActivity extends Activity {
                                 intent.setAction(DownloadService.ACTION_DOWNLOAD_WITH_DOWNLOAD_MANAGER);
                                 intent.putExtra("url", url);
                                 intent.putExtra("version", version);
-                                intent.putExtra("file_name", "souyidai" + version + ".apk");
+                                intent.putExtra("file_name", "aoshan" + version + ".apk");
                                 startService(intent);
                                 if (forward) {
                                     Intent homeIntent = new Intent(Intent.ACTION_MAIN);
@@ -63,7 +63,7 @@ public class DownloadDialogActivity extends Activity {
                                 intent.setAction(DownloadService.ACTION_DOWNLOAD_WITH_DOWNLOAD_MANAGER);
                                 intent.putExtra("url", url);
                                 intent.putExtra("version", version);
-                                intent.putExtra("file_name", "souyidai" + version + ".apk");
+                                intent.putExtra("file_name", "aoshan" + version + ".apk");
                                 startService(intent);
                                 finish();
                                 startLockScreenActivity();
