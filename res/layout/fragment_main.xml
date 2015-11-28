@@ -91,7 +91,8 @@
 							android:text="11.3"
 							android:textSize="@dimen/dimen_27_dip"
 							android:textColor="#F71E1E"
-							android:includeFontPadding="false"/>
+							android:includeFontPadding="false"
+							android:id="@+id/rate"/>
 				        <TextView
 				            android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
@@ -99,27 +100,36 @@
 							android:textSize="@dimen/dimen_12_dip"
 							android:textColor="#F71E1E"
 							android:includeFontPadding="false"/>
-				        <TextView
-				            android:layout_width="wrap_content"
+				        <LinearLayout
+					        android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="+"
-							android:textSize="@dimen/dimen_12_dip"
-							android:textColor="#F71E1E"
-							android:includeFontPadding="false"/>
-				        <TextView
-				            android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="0.25"
-							android:textSize="@dimen/dimen_12_dip"
-							android:textColor="#F71E1E"
-							android:includeFontPadding="false"/>
-				        <TextView
-				            android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="%"
-							android:textSize="@dimen/dimen_12_dip"
-							android:textColor="#F71E1E"
-							android:includeFontPadding="false"/>
+							android:orientation="horizontal"
+							android:gravity="bottom"
+							android:layout_marginBottom="@dimen/dimen_2_dip"
+							android:id="@+id/extra_rate_layout">
+				            <TextView
+					            android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="+"
+								android:textSize="@dimen/dimen_12_dip"
+								android:textColor="#F71E1E"
+								android:includeFontPadding="false"/>
+					        <TextView
+					            android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="0.25"
+								android:textSize="@dimen/dimen_12_dip"
+								android:textColor="#F71E1E"
+								android:includeFontPadding="false"
+								android:id="@+id/extra_rate"/>
+					        <TextView
+					            android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="%"
+								android:textSize="@dimen/dimen_12_dip"
+								android:textColor="#F71E1E"
+								android:includeFontPadding="false"/>
+				        </LinearLayout>
 				    </LinearLayout>
 				    <TextView
 				            android:layout_width="wrap_content"
@@ -152,7 +162,8 @@
 							android:text="3个月"
 			                android:textSize="@dimen/dimen_13_dip"
 			         		android:textColor="#555555"
-			         		android:includeFontPadding="false"/>
+			         		android:includeFontPadding="false"
+			         		android:id="@+id/period"/>
 			            <TextView
 			                android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
@@ -174,7 +185,8 @@
 							android:text="1000.00"
 			                android:textSize="@dimen/dimen_13_dip"
 			         		android:textColor="#555555"
-			         		android:includeFontPadding="false"/>
+			         		android:includeFontPadding="false"
+			         		android:id="@+id/at_least"/>
 			            <TextView
 			                android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
@@ -196,7 +208,8 @@
 							android:text="200,000.00"
 			                android:textSize="@dimen/dimen_13_dip"
 			         		android:textColor="#555555"
-			         		android:includeFontPadding="false"/>
+			         		android:includeFontPadding="false"
+			         		android:id="@+id/available"/>
 			            <TextView
 			                android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
@@ -228,7 +241,8 @@
 							android:text="00"
 			                android:textSize="@dimen/dimen_11_dip"
 			         		android:textColor="#2EA2F9"
-			         		android:includeFontPadding="false"/>
+			         		android:includeFontPadding="false"
+			         		android:id="@+id/day"/>
 			        <TextView
 			                android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
@@ -242,7 +256,8 @@
 							android:text="11"
 			                android:textSize="@dimen/dimen_11_dip"
 			         		android:textColor="#2EA2F9"
-			         		android:includeFontPadding="false"/>
+			         		android:includeFontPadding="false"
+			         		android:id="@+id/hour"/>
 			        <TextView
 			                android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
@@ -256,7 +271,8 @@
 							android:text="26"
 			                android:textSize="@dimen/dimen_11_dip"
 			         		android:textColor="#2EA2F9"
-			         		android:includeFontPadding="false"/>
+			         		android:includeFontPadding="false"
+			         		android:id="@+id/minute"/>
 			        <TextView
 			                android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
@@ -270,7 +286,8 @@
 							android:text="18"
 			                android:textSize="@dimen/dimen_11_dip"
 			         		android:textColor="#2EA2F9"
-			         		android:includeFontPadding="false"/>
+			         		android:includeFontPadding="false"
+			         		android:id="@+id/second"/>
 			        <TextView
 			                android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
