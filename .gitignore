@@ -25,3 +25,8 @@ proguard/
 
 # Log Files
 *.log
+
+*/.classpath
+*/.project
+*/.settings/
+project_libs/Android-PullToRefresh/library/
