@@ -9,38 +9,122 @@ package com.example.money;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int aspect=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bgColor=0x7f010001;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int progress=0x7f010008;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int progressBgColor=0x7f010002;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int progressColor=0x7f010003;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int remainderColor=0x7f010006;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ringColor=0x7f010004;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ringColorClicked=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ringWidth=0x7f010007;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int unit=0x7f010009;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int unitColor=0x7f01000a;
     }
     public static final class color {
-        public static final int about_content=0x7f060013;
-        public static final int action_bar_bg=0x7f060010;
-        public static final int announcement_bg=0x7f060015;
-        public static final int announcement_divider=0x7f060014;
-        public static final int button_green_default=0x7f060004;
-        public static final int button_green_disable=0x7f060006;
-        public static final int button_green_pressed=0x7f060005;
-        public static final int button_main_default=0x7f060000;
-        public static final int button_main_disable=0x7f060002;
-        public static final int button_main_pressed=0x7f060001;
-        public static final int divider=0x7f060003;
-        public static final int first_text=0x7f06000a;
-        public static final int line_divider=0x7f060011;
-        public static final int my_account_preference_bg_pressed=0x7f060017;
-        public static final int my_account_preference_title=0x7f060016;
-        public static final int radio_button_selected_color=0x7f06000d;
-        public static final int radio_button_unselected_color=0x7f06000e;
-        public static final int second_text=0x7f06000b;
-        public static final int share_bg_transparent=0x7f060012;
-        public static final int tab_bg=0x7f060009;
-        public static final int tab_normal=0x7f060008;
-        public static final int tab_select=0x7f060007;
-        public static final int third_text=0x7f06000c;
-        public static final int warning=0x7f06000f;
+        public static final int black=0x7f060000;
+        public static final int gray_bg=0x7f060005;
+        public static final int lock_screen_white_path=0x7f060006;
+        public static final int main_blue=0x7f060004;
+        public static final int share_bg_transparent=0x7f060007;
+        public static final int tab_bg=0x7f06000a;
+        public static final int tab_normal=0x7f060009;
+        public static final int tab_select=0x7f060008;
+        public static final int transparent=0x7f060003;
+        public static final int white=0x7f060001;
+        public static final int white_20=0x7f060002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
          */
-        public static final int activity_horizontal_margin=0x7f040289;
-        public static final int activity_vertical_margin=0x7f04028a;
+        public static final int activity_horizontal_margin=0x7f040258;
+        public static final int activity_vertical_margin=0x7f040259;
         public static final int dimen_100_dip=0x7f040063;
         public static final int dimen_101_dip=0x7f040064;
         public static final int dimen_102_dip=0x7f040065;
@@ -597,59 +681,10 @@ public final class R {
         public static final int dimen_59_dip=0x7f04003a;
         public static final int dimen_5_dip=0x7f040004;
         public static final int dimen_600_dip=0x7f040257;
-        public static final int dimen_601_dip=0x7f040258;
-        public static final int dimen_602_dip=0x7f040259;
-        public static final int dimen_603_dip=0x7f04025a;
-        public static final int dimen_604_dip=0x7f04025b;
-        public static final int dimen_605_dip=0x7f04025c;
-        public static final int dimen_606_dip=0x7f04025d;
-        public static final int dimen_607_dip=0x7f04025e;
-        public static final int dimen_608_dip=0x7f04025f;
-        public static final int dimen_609_dip=0x7f040260;
         public static final int dimen_60_dip=0x7f04003b;
-        public static final int dimen_610_dip=0x7f040261;
-        public static final int dimen_611_dip=0x7f040262;
-        public static final int dimen_612_dip=0x7f040263;
-        public static final int dimen_613_dip=0x7f040264;
-        public static final int dimen_614_dip=0x7f040265;
-        public static final int dimen_615_dip=0x7f040266;
-        public static final int dimen_616_dip=0x7f040267;
-        public static final int dimen_617_dip=0x7f040268;
-        public static final int dimen_618_dip=0x7f040269;
-        public static final int dimen_619_dip=0x7f04026a;
         public static final int dimen_61_dip=0x7f04003c;
-        public static final int dimen_620_dip=0x7f04026b;
-        public static final int dimen_621_dip=0x7f04026c;
-        public static final int dimen_622_dip=0x7f04026d;
-        public static final int dimen_623_dip=0x7f04026e;
-        public static final int dimen_624_dip=0x7f04026f;
-        public static final int dimen_625_dip=0x7f040270;
-        public static final int dimen_626_dip=0x7f040271;
-        public static final int dimen_627_dip=0x7f040272;
-        public static final int dimen_628_dip=0x7f040273;
-        public static final int dimen_629_dip=0x7f040274;
         public static final int dimen_62_dip=0x7f04003d;
-        public static final int dimen_630_dip=0x7f040275;
-        public static final int dimen_631_dip=0x7f040276;
-        public static final int dimen_632_dip=0x7f040277;
-        public static final int dimen_633_dip=0x7f040278;
-        public static final int dimen_634_dip=0x7f040279;
-        public static final int dimen_635_dip=0x7f04027a;
-        public static final int dimen_636_dip=0x7f04027b;
-        public static final int dimen_637_dip=0x7f04027c;
-        public static final int dimen_638_dip=0x7f04027d;
-        public static final int dimen_639_dip=0x7f04027e;
         public static final int dimen_63_dip=0x7f04003e;
-        public static final int dimen_640_dip=0x7f04027f;
-        public static final int dimen_641_dip=0x7f040280;
-        public static final int dimen_642_dip=0x7f040281;
-        public static final int dimen_643_dip=0x7f040282;
-        public static final int dimen_644_dip=0x7f040283;
-        public static final int dimen_645_dip=0x7f040284;
-        public static final int dimen_646_dip=0x7f040285;
-        public static final int dimen_647_dip=0x7f040286;
-        public static final int dimen_648_dip=0x7f040287;
-        public static final int dimen_649_dip=0x7f040288;
         public static final int dimen_64_dip=0x7f04003f;
         public static final int dimen_65_dip=0x7f040040;
         public static final int dimen_66_dip=0x7f040041;
@@ -701,43 +736,167 @@ public final class R {
         public static final int btn4_1=0x7f020006;
         public static final int btn4_2=0x7f020007;
         public static final int ic_launcher=0x7f020008;
-        public static final int main_tab_find=0x7f020009;
-        public static final int main_tab_main=0x7f02000a;
-        public static final int main_tab_my=0x7f02000b;
-        public static final int tab_text_selector=0x7f02000c;
+        public static final int icon_recommend_new=0x7f020009;
+        public static final int indicator_code_lock_drag_direction_green_up=0x7f02000a;
+        public static final int indicator_code_lock_drag_direction_red_up=0x7f02000b;
+        public static final int indicator_code_lock_point_area_default_holo=0x7f02000c;
+        public static final int indicator_code_lock_point_area_green_holo=0x7f02000d;
+        public static final int indicator_code_lock_point_area_red_holo=0x7f02000e;
+        public static final int main_tab_find=0x7f02000f;
+        public static final int main_tab_main=0x7f020010;
+        public static final int main_tab_my=0x7f020011;
+        public static final int password_invisible=0x7f020012;
+        public static final int password_visible=0x7f020013;
+        public static final int recommend_background_blue=0x7f020014;
+        public static final int recommend_background_white=0x7f020015;
+        public static final int tab_text_selector=0x7f020016;
     }
     public static final class id {
-        public static final int action_settings=0x7f090002;
-        public static final int realtabcontent=0x7f090000;
-        public static final int textView1=0x7f090001;
+        public static final int action_settings=0x7f0a0016;
+        public static final int banner_indicator_container=0x7f0a0012;
+        public static final int banner_pager=0x7f0a0011;
+        public static final int bar_title=0x7f0a0015;
+        public static final int button_layout=0x7f0a0004;
+        public static final int cancel=0x7f0a0005;
+        public static final int debug_layout=0x7f0a0007;
+        public static final int go=0x7f0a0009;
+        public static final int head=0x7f0a000c;
+        public static final int input_url=0x7f0a0008;
+        public static final int layout=0x7f0a0001;
+        public static final int load_error_layout=0x7f0a0013;
+        public static final int main_layout=0x7f0a0000;
+        public static final int msg_layout=0x7f0a0010;
+        public static final int progress=0x7f0a000f;
+        public static final int progress_bar_layout=0x7f0a0014;
+        public static final int share_list=0x7f0a0003;
+        public static final int space_holder=0x7f0a0006;
+        public static final int tail=0x7f0a000d;
+        public static final int tender_title=0x7f0a000e;
+        public static final int textView1=0x7f0a000b;
+        public static final int title=0x7f0a0002;
+        public static final int web_view=0x7f0a000a;
+    }
+    public static final class integer {
+        public static final int gesture_requested_minimum_password_length=0x7f070000;
+        public static final int gesture_requested_password_quality=0x7f070001;
+        public static final int pattern_max_attempt_times=0x7f070002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int fragment_find=0x7f030001;
-        public static final int fragment_main=0x7f030002;
-        public static final int fragment_my=0x7f030003;
-        public static final int view_main_tab_find=0x7f030004;
-        public static final int view_main_tab_main=0x7f030005;
-        public static final int view_main_tab_my=0x7f030006;
+        public static final int activity_share=0x7f030001;
+        public static final int activity_webview=0x7f030002;
+        public static final int fragment_find=0x7f030003;
+        public static final int fragment_main=0x7f030004;
+        public static final int fragment_my=0x7f030005;
+        public static final int header_fragment_main=0x7f030006;
+        public static final int load_error=0x7f030007;
+        public static final int loading=0x7f030008;
+        public static final int template_title_bar=0x7f030009;
+        public static final int view_main_tab_find=0x7f03000a;
+        public static final int view_main_tab_main=0x7f03000b;
+        public static final int view_main_tab_my=0x7f03000c;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f05000d;
+        public static final int action_settings=0x7f050026;
         public static final int app_name=0x7f050001;
         public static final int call_log_type_incoming=0x7f050003;
         public static final int call_log_type_missed=0x7f050002;
         public static final int call_log_type_outgoing=0x7f050004;
+        public static final int cancel=0x7f050010;
+        public static final int check_version=0x7f050016;
+        public static final int confirm=0x7f05000e;
+        public static final int confirm_pattern_password=0x7f050037;
+        public static final int current_version=0x7f05001a;
+        public static final int different_from_last_pattern_hint=0x7f05003a;
+        public static final int download_failed_check_sdcard=0x7f050045;
+        public static final int download_failed_notification_content=0x7f050047;
+        public static final int download_failed_notification_title=0x7f050046;
+        public static final int download_later=0x7f05000d;
+        public static final int download_new_version=0x7f05000c;
+        public static final int download_progress_percent=0x7f050042;
+        public static final int download_successful_notification_content=0x7f050043;
+        public static final int download_successful_notification_title=0x7f050044;
+        public static final int errcode_cancel=0x7f05002b;
+        public static final int errcode_deny=0x7f05002c;
+        public static final int errcode_success=0x7f05002a;
+        public static final int errcode_unknown=0x7f05002d;
         public static final int hello=0x7f050000;
-        public static final int hello_world=0x7f05000c;
+        public static final int hello_world=0x7f050025;
+        public static final int hint=0x7f050017;
+        public static final int internet_exception=0x7f050019;
+        public static final int known=0x7f050011;
+        public static final int load_error=0x7f050030;
+        public static final int loading_error=0x7f050029;
+        /**  Accessibility description sent when user adds a cell to the pattern. [CHAR LIMIT=NONE] 
+         */
+        public static final int lockscreen_access_pattern_cell_added=0x7f05001c;
+        /**  Accessibility description sent when the pattern times out and is cleared. [CHAR LIMIT=NONE] 
+         */
+        public static final int lockscreen_access_pattern_cleared=0x7f05001e;
+        /**  Accessibility description sent when user completes drawing a pattern. [CHAR LIMIT=NONE] 
+         */
+        public static final int lockscreen_access_pattern_detected=0x7f05001d;
+        /**  Lock 
+ Accessibility description sent when user starts drawing a lock pattern. [CHAR LIMIT=NONE] 
+         */
+        public static final int lockscreen_access_pattern_start=0x7f05001b;
+        /** 
+         On the unlock screen, message shown on button that appears once it's apparent the user may have forgotten
+         their lock gesture
+    
+         */
+        public static final int lockscreen_forgot_pattern_button_text=0x7f050022;
+        public static final int lockscreen_login_other_account_button_text=0x7f050024;
+        /**  On the unlock pattern screen, shown at the top of the unlock screen to tell the user what to do. Below this text is the place for theu ser to draw the pattern. 
+         */
+        public static final int lockscreen_pattern_instructions=0x7f050020;
+        /**  On the unlock pattern screen, shown when the user enters the wrong lock pattern and must try again. 
+         */
+        public static final int lockscreen_pattern_wrong=0x7f050021;
+        public static final int lockscreen_reset_button_text=0x7f050023;
+        /** 
+         On the unlock screen, countdown message shown while user is waiting to try again after too many
+         failed attempts
+    
+         */
+        public static final int lockscreen_too_many_failed_attempts_countdown=0x7f05001f;
+        public static final int login_password=0x7f050032;
+        public static final int logout_dialog_message=0x7f05002e;
+        public static final int logout_msg=0x7f050015;
+        public static final int main_title=0x7f050027;
         public static final int message_type_draft=0x7f050007;
         public static final int message_type_failed=0x7f050009;
         public static final int message_type_inbox=0x7f050005;
         public static final int message_type_outbox=0x7f050008;
         public static final int message_type_queued=0x7f05000a;
         public static final int message_type_sent=0x7f050006;
+        public static final int modify_login_password=0x7f050033;
+        public static final int modify_pattern_password=0x7f050038;
+        public static final int new_password=0x7f050040;
+        public static final int new_password_hint=0x7f05003f;
+        public static final int no_new_version=0x7f050049;
+        public static final int no_pattern_password_hint=0x7f050035;
+        public static final int old_password=0x7f05003e;
+        public static final int old_password_hint=0x7f05003d;
+        public static final int pattern_error_hint=0x7f05003b;
+        public static final int pattern_input_hint=0x7f05003c;
+        public static final int pattern_password=0x7f050034;
+        public static final int pattern_password_at_least_four_point_hint=0x7f050039;
+        public static final int percent_sign=0x7f050012;
+        public static final int reload_hint_text=0x7f050031;
+        public static final int save=0x7f050041;
+        public static final int save_failed=0x7f050014;
+        public static final int save_successfully=0x7f050013;
+        public static final int set_pattern_password=0x7f050036;
+        public static final int settings=0x7f05000f;
+        public static final int skip=0x7f050028;
+        public static final int spec=0x7f050018;
         public static final int unknown=0x7f05000b;
+        public static final int update_failed=0x7f050048;
+        public static final int verify=0x7f05002f;
     }
     public static final class style {
         /** 
@@ -750,10 +909,293 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
+        /**  <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item> 
+         */
+        public static final int ShareDialogAnimation=0x7f080002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ClearableEditText.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ClearableEditText_android_enabled android:enabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_android_hint android:hint}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_android_inputType android:inputType}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_android_text android:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_android_textColor android:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_android_textColorHint android:textColorHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_android_textSize android:textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_unit com.example.money:unit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ClearableEditText_unitColor com.example.money:unitColor}</code></td><td></td></tr>
+           </table>
+           @see #ClearableEditText_android_enabled
+           @see #ClearableEditText_android_hint
+           @see #ClearableEditText_android_inputType
+           @see #ClearableEditText_android_text
+           @see #ClearableEditText_android_textColor
+           @see #ClearableEditText_android_textColorHint
+           @see #ClearableEditText_android_textSize
+           @see #ClearableEditText_unit
+           @see #ClearableEditText_unitColor
+         */
+        public static final int[] ClearableEditText = {
+            0x0101000e, 0x01010095, 0x01010098, 0x0101009a,
+            0x0101014f, 0x01010150, 0x01010220, 0x7f010009,
+            0x7f01000a
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#enabled}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+          @attr name android:enabled
+        */
+        public static final int ClearableEditText_android_enabled = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#hint}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+          @attr name android:hint
+        */
+        public static final int ClearableEditText_android_hint = 5;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#inputType}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+          @attr name android:inputType
+        */
+        public static final int ClearableEditText_android_inputType = 6;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#text}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+          @attr name android:text
+        */
+        public static final int ClearableEditText_android_text = 4;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textColor}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+          @attr name android:textColor
+        */
+        public static final int ClearableEditText_android_textColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textColorHint}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+          @attr name android:textColorHint
+        */
+        public static final int ClearableEditText_android_textColorHint = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#textSize}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+          @attr name android:textSize
+        */
+        public static final int ClearableEditText_android_textSize = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#unit}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:unit
+        */
+        public static final int ClearableEditText_unit = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#unitColor}
+          attribute's value can be found in the {@link #ClearableEditText} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:unitColor
+        */
+        public static final int ClearableEditText_unitColor = 8;
+        /** Attributes that can be used with a LockPatternView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #LockPatternView_aspect com.example.money:aspect}</code></td><td></td></tr>
+           </table>
+           @see #LockPatternView_aspect
+         */
+        public static final int[] LockPatternView = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#aspect}
+          attribute's value can be found in the {@link #LockPatternView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:aspect
+        */
+        public static final int LockPatternView_aspect = 0;
+        /** Attributes that can be used with a SectorRing.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SectorRing_bgColor com.example.money:bgColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SectorRing_progress com.example.money:progress}</code></td><td></td></tr>
+           <tr><td><code>{@link #SectorRing_progressBgColor com.example.money:progressBgColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SectorRing_progressColor com.example.money:progressColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SectorRing_remainderColor com.example.money:remainderColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SectorRing_ringColor com.example.money:ringColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SectorRing_ringColorClicked com.example.money:ringColorClicked}</code></td><td></td></tr>
+           <tr><td><code>{@link #SectorRing_ringWidth com.example.money:ringWidth}</code></td><td></td></tr>
+           </table>
+           @see #SectorRing_bgColor
+           @see #SectorRing_progress
+           @see #SectorRing_progressBgColor
+           @see #SectorRing_progressColor
+           @see #SectorRing_remainderColor
+           @see #SectorRing_ringColor
+           @see #SectorRing_ringColorClicked
+           @see #SectorRing_ringWidth
+         */
+        public static final int[] SectorRing = {
+            0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004,
+            0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#bgColor}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:bgColor
+        */
+        public static final int SectorRing_bgColor = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#progress}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:progress
+        */
+        public static final int SectorRing_progress = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#progressBgColor}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:progressBgColor
+        */
+        public static final int SectorRing_progressBgColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#progressColor}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:progressColor
+        */
+        public static final int SectorRing_progressColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#remainderColor}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:remainderColor
+        */
+        public static final int SectorRing_remainderColor = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#ringColor}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:ringColor
+        */
+        public static final int SectorRing_ringColor = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#ringColorClicked}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:ringColorClicked
+        */
+        public static final int SectorRing_ringColorClicked = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.example.money.R.attr#ringWidth}
+          attribute's value can be found in the {@link #SectorRing} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.money:ringWidth
+        */
+        public static final int SectorRing_ringWidth = 6;
+    };
 }
