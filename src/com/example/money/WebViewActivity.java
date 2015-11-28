@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.example.money.entity.WebViewCommunication;
 import com.example.money.entity.User;
+import com.example.money.entity.WebViewCommunication;
 import com.example.money.utils.UiHelper;
 
 import android.annotation.TargetApi;
@@ -95,7 +95,7 @@ public class WebViewActivity extends CommonBaseActivity implements View.OnClickL
         cookieManager.removeSessionCookie();
         mWebView.addJavascriptInterface(new WebViewCommunication(this), "JsCommunication");
         User user = User.getInstance(this);
-        if (user.getWayToLogin() != null) {
+        if (User.isLogin(this)) {
             mWebView.addJavascriptInterface(user.getId(), "uid");
             mWebView.addJavascriptInterface(user.getToken(), "sydaccesstoken");
         }
@@ -163,7 +163,7 @@ public class WebViewActivity extends CommonBaseActivity implements View.OnClickL
 
     public void addCookie(String url) {
         User user = User.getInstance(WebViewActivity.this);
-        if (user.getWayToLogin() != null) {
+        if (User.isLogin(this)) {
             CookieSyncManager.createInstance(this);
             CookieManager cookieManager = CookieManager.getInstance();
             cookieManager.setAcceptCookie(true);

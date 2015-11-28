@@ -28,7 +28,7 @@ public class AoShan extends Application {
 
     public static final boolean DEBUG = true;
     public static final String TAG = AoShan.class.getSimpleName();
-    public static final String MOBILE_MD5_SIGN = "j7dAuXMhpE76LRrETe8bTQ";
+    public static final String MOBILE_MD5_SIGN = "";
 
     public static RequestQueue sRequestQueue;
     public static final String HOST = "http://.../"; //TODO 补全host
@@ -58,8 +58,8 @@ public class AoShan extends Application {
 
     public static boolean sIsInBackground = true;
 
-    public static final String WX_APP_ID = "wxece2d80f3747bc52";
-    public static final String QQ_APP_ID = "1103532582";
+    public static final String WX_APP_ID = "";
+    public static final String QQ_APP_ID = "";
     private IWXAPI mWxApi;
     public static Tencent mTencent;
 

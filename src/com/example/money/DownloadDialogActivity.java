@@ -11,7 +11,7 @@ import com.example.money.entity.User;
 import com.example.money.service.DownloadService;
 
 /**
- * Created by su on 2014/7/31.
+ * Created by su on 2015/11/28.
  * Only for download apk!
  */
 public class DownloadDialogActivity extends Activity {
@@ -84,8 +84,7 @@ public class DownloadDialogActivity extends Activity {
     }
 
     private void startLockScreenActivity() {
-        User user = User.getInstance(this);
-        if (AoShan.sIsInBackground && user.getWayToLogin() != null) {
+        if (AoShan.sIsInBackground && User.isLogin(this)) {
             SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
             boolean enable = sp.getBoolean(Constants.SP_COLUMN_PATTERN_PASSWORD_ENABLE, false);
             if (enable) {

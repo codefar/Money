@@ -54,7 +54,7 @@ public abstract class BaseAppCompatActivity extends Activity {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (Intent.ACTION_SCREEN_ON.equals(intent.getAction())) {
-                if (User.getInstance(context).getWayToLogin() != null
+                if (User.isLogin(context)
                         && mSP.getBoolean(Constants.SP_COLUMN_PATTERN_PASSWORD_ENABLE, false)) {
                     ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
                     ComponentName topActivity = activityManager.getRunningTasks(1).get(0).topActivity;
@@ -105,7 +105,7 @@ public abstract class BaseAppCompatActivity extends Activity {
         super.onRestart();
 
         if (AoShan.sIsInBackground
-                && User.getInstance(this).getWayToLogin() != null
+                && User.isLogin(this)
                 && mSP.getBoolean(Constants.SP_COLUMN_PATTERN_PASSWORD_ENABLE, false)) {
 //            startActivity(new Intent(this, LockScreenActivity.class));
         }
@@ -118,7 +118,7 @@ public abstract class BaseAppCompatActivity extends Activity {
     protected void onStart() {
         super.onStart();
         if (AoShan.sIsInBackground
-                && User.getInstance(this).getWayToLogin() != null
+                && User.isLogin(this)
                 && mSP.getBoolean(Constants.SP_COLUMN_PATTERN_PASSWORD_ENABLE, false)) {
 //            startActivity(new Intent(this, LockScreenActivity.class));
         }

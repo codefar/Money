@@ -15,47 +15,53 @@ import android.text.TextUtils;
 import android.util.Log;
 
 /**
- * Created by su on 2014/6/12.
+ * Created by su on 2015/11/29.
  */
 public class User {
 
     public static final boolean DEBUG = AoShan.DEBUG;
     private static final String TAG = User.class.getSimpleName();
 
+    private String mId;
+    private String mSessionId;
+    private String mId5;
+    private String mName;
+    private String mRealName;
+    private String mNickName;
+    private String mToken = "";
+    private long mLoginTime;
+    private String phone;
+    private long mExpireTime;
+
     private static User sUser = null;
 
     private User() {
+    }
+
+    public static boolean isLogin(Context c) {
+    	return !TextUtils.isEmpty(getInstance(c).getPhone());
     }
 
     public static synchronized User getInstance(Context context) {
         if (sUser == null) {
             sUser = new User();
             SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-            String wayToLogin = sp.getString(Constants.SP_COLUMN_WAY_TO_LOGIN, "");
-            Log.v(TAG, "wayToLogin: " + wayToLogin);
+            sUser.phone = sp.getString(Constants.SP_COLUMN_USER_PHONE_NUMBER, "");
             //未登录
-            if (wayToLogin.equals("")) {
+            if (TextUtils.isEmpty(sUser.phone)) {
                 return sUser;
             } else {
-                if (wayToLogin.equals(LoginWay.SYD.name())) {
-                    sUser.mWayToLogin = LoginWay.SYD;
-                } else if (wayToLogin.equals(LoginWay.QQ.name())) {
-                    sUser.mWayToLogin = LoginWay.QQ;
-                } else if (wayToLogin.equals(LoginWay.WEIBO.name())) {
-                    sUser.mWayToLogin = LoginWay.WEIBO;
-                }
-                sUser.mId = Integer.parseInt(sp.getString(Constants.SP_COLUMN_USER_ID, "-1"));
+                sUser.mId = sp.getString(Constants.SP_COLUMN_USER_ID, "");
                 sUser.mName = sp.getString(Constants.SP_COLUMN_USER_NAME, "");
                 sUser.mToken = sp.getString(Constants.SP_COLUMN_USER_TOKEN, "");
                 sUser.mLoginTime = sp.getLong(Constants.SP_COLUMN_USER_LOGIN_TIME, -1);
                 sUser.mExpireTime = sp.getLong(Constants.SP_COLUMN_USER_EXPIRE_TIME, -1);
-                sUser.mPhoneNumber = sp.getLong(Constants.SP_COLUMN_USER_PHONE_NUMBER, -1);
-                sUser.mEmail = sp.getString(Constants.SP_COLUMN_USER_PHONE_EMAIL, "");
+
                 sUser.mId5 = sp.getString(Constants.SP_COLUMN_USER_PHONE_ID5, "");
                 sUser.setNickName(sp.getString(Constants.SP_COLUMN_USER_PHONE_NICKNAME, ""));
             }
         } else {
-            if (sUser.mWayToLogin != null && !isValid()) {
+            if (TextUtils.isEmpty(sUser.phone) && !isValid()) {
                 clearUser(context);
             }
         }
@@ -63,60 +69,30 @@ public class User {
         return sUser;
     }
 
-    public static enum LoginWay {
-        SYD,
-        QQ,
-        WEIBO
-    }
-
-    private LoginWay mWayToLogin = null;
-    private long mId;
-    private String mId5;
-    private String mName;
-    private String mRealName;
-    private String mNickName;
-    private String mToken = "";
-    private long mLoginTime;
-    private long mPhoneNumber;
-    private String mEmail;
-    private long mExpireTime;
-    private long mCouponAmount; //可用红包金额
-
     @Override
-    public String toString() {
-        return "User{" +
-                "mWayToLogin=" + mWayToLogin +
-                ", mId=" + mId +
-                ", mId5='" + mId5 + '\'' +
-                ", mName='" + mName + '\'' +
-                ", mRealName='" + mRealName + '\'' +
-                ", mNickName='" + mNickName + '\'' +
-                ", mToken='" + mToken + '\'' +
-                ", mLoginTime=" + Constants.SDF_YYYY_MM_DD_HH_MM_SS.format(new Date(mLoginTime)) +
-                ", mPhoneNumber=" + mPhoneNumber +
-                ", mEmail='" + mEmail + '\'' +
-                ", mExpireTime=" + Constants.SDF_YYYY_MM_DD_HH_MM_SS.format(new Date(mExpireTime)) +
-                ", mCouponAmount=" + mCouponAmount +
-                '}';
-    }
+	public String toString() {
+		return "User [mId=" + mId + ", mSessionId=" + mSessionId + ", mId5=" + mId5 + ", mName=" + mName
+				+ ", mRealName=" + mRealName + ", mNickName=" + mNickName + ", mToken=" + mToken + ", mLoginTime="
+				+ mLoginTime + ", phone=" + phone + ", mExpireTime=" + mExpireTime + "]";
+	}
 
-    public LoginWay getWayToLogin() {
-        return mWayToLogin;
-    }
-
-    public void setWayToLogin(LoginWay wayToLogin) {
-        this.mWayToLogin = wayToLogin;
-    }
-
-    public long getId() {
+	public String getId() {
         return mId;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.mId = id;
     }
 
-    public String getName() {
+    public String getSessionId() {
+		return mSessionId;
+	}
+
+	public void setSessionId(String sessionId) {
+		this.mSessionId = sessionId;
+	}
+
+	public String getName() {
         return mName;
     }
 
@@ -166,22 +142,12 @@ public class User {
         this.mLoginTime = loginTime;
     }
 
-    public long getPhoneNumber() {
-        return mPhoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
-        this.mPhoneNumber = phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        if (phoneNumber != null) {
-            try {
-                this.mPhoneNumber = Long.parseLong(phoneNumber.replaceAll("^\\+0?86", ""));
-            } catch (NumberFormatException e) {
-                Log.e(TAG, "wrong cell number! NUMBER = " + phoneNumber);
-            }
-        }
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getId5() {
@@ -215,41 +181,19 @@ public class User {
         return hideName;
     }
 
-    public String getEmail() {
-        return mEmail;
-    }
-
-    public void setEmail(String email) {
-        this.mEmail = email;
-    }
-
     public static synchronized void saveUser(Context context, User user) {
         //不要保存SP_COLUMN_USER_BIND_JPUSH字段
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        sp.edit().putString(Constants.SP_COLUMN_WAY_TO_LOGIN, user.mWayToLogin.name())
-                .putString(Constants.SP_COLUMN_USER_ID, String.valueOf(user.mId))
+        sp.edit().putString(Constants.SP_COLUMN_USER_ID, String.valueOf(user.mId))
                 .putString(Constants.SP_COLUMN_USER_NAME, user.mName)
                 .putString(Constants.SP_COLUMN_USER_TOKEN, user.mToken)
-                .putLong(Constants.SP_COLUMN_USER_PHONE_NUMBER, user.mPhoneNumber)
+                .putString(Constants.SP_COLUMN_USER_PHONE_NUMBER, user.phone)
                 .putString(Constants.SP_COLUMN_USER_PHONE_NICKNAME, user.mNickName)
-                .putString(Constants.SP_COLUMN_USER_PHONE_EMAIL, user.mEmail)
                 .putString(Constants.SP_COLUMN_USER_PHONE_ID5, user.mId5)
                 .putLong(Constants.SP_COLUMN_USER_LOGIN_TIME, user.mLoginTime)
                 .putLong(Constants.SP_COLUMN_USER_EXPIRE_TIME, user.mExpireTime)
                 .apply();
         onSaveUser(context);
-    }
-
-    public long getCouponAmount() {
-        return mCouponAmount;
-    }
-
-    public String getCouponAmountText() {
-        return Constants.FORMAT_AMOUNT.format(mCouponAmount / (double) 100).replaceAll("(\\d)(?=(?:\\d{3})+(?:\\.\\d+)?$)", "$1,");
-    }
-
-    public void setCouponAmount(long couponAmount) {
-        this.mCouponAmount = couponAmount;
     }
 
     private static void onSaveUser(Context context) {
@@ -265,7 +209,6 @@ public class User {
                 .putString(Constants.SP_COLUMN_USER_TOKEN, "")
                 .putBoolean(Constants.SP_COLUMN_NICKNAME_STATUS, false)
                 .putString(Constants.SP_COLUMN_USER_PHONE_NICKNAME, "")
-                .putString(Constants.SP_COLUMN_USER_PHONE_EMAIL, "")
                 .putString(Constants.SP_COLUMN_USER_PHONE_ID5, "")
                 .putLong(Constants.SP_COLUMN_USER_PHONE_NUMBER, -1)
                 .putLong(Constants.SP_COLUMN_USER_LOGIN_TIME, -1)
@@ -321,14 +264,14 @@ public class User {
     }
 
     /**
-     * 获取用户显示名-昵称->手机号->邮箱
+     * 获取用户显示名-昵称->手机号
      */
     public static String getDisplayName(Context context) {
         User user = User.getInstance(context);
         if (!TextUtils.isEmpty(user.getNickName())) {
             return hideName(user.getNickName(), 1, 1);
-        } else if (!TextUtils.isEmpty(String.valueOf(user.getPhoneNumber())) && AppHelper.isPhoneNumber(String.valueOf(user.getPhoneNumber()))) {
-            return hideName(String.valueOf(user.getPhoneNumber()), 3, 3);
+        } else if (!TextUtils.isEmpty(user.getPhone()) && AppHelper.isPhoneNumber(String.valueOf(user.getPhone()))) {
+            return hideName(String.valueOf(user.getPhone()), 3, 3);
         } else {
             String loginName = user.getName();
             if (loginName.contains("@")) {

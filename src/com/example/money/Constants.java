@@ -47,7 +47,6 @@ public class Constants {
     public static final String SP_COLUMN_USER_LOGIN_TIME = "user_login_time";
     public static final String SP_COLUMN_USER_PHONE_NUMBER = "user_phone_number";
     public static final String SP_COLUMN_USER_PHONE_NICKNAME = "user_phone_nickname";
-    public static final String SP_COLUMN_USER_PHONE_EMAIL = "user_phone_email";
     public static final String SP_COLUMN_USER_PHONE_ID5 = "user_phone_id5";
     public static final String SP_COLUMN_USER_EXPIRE_TIME = "user_expire_time";
     public static final String SP_COLUMN_NEED_TO_UPDATE = "need_to_update";
@@ -62,7 +61,6 @@ public class Constants {
     public static final String SP_COLUMN_WRONG_TIMES = "wrong_times";
     public static final String SP_COLUMN_TRADE_PASSWORD_STATUS = "trade_password_status";
     public static final String SP_COLUMN_NICKNAME_STATUS = "nickname_status";
-    public static final String SP_COLUMN_EMAIL_STATUS = "email_status";
     public static final String SP_COLUMN_QUESTION_ID = "question_id";
     public static final String SP_COLUMN_HAS_NEW_MESSAGE = "has_new_message";
     public static final String SP_COLUMN_MAX_UNREAD_MESSAGE_ID = "max_unread_message_id";
