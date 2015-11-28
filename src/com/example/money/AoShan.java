@@ -26,7 +26,7 @@ import android.view.WindowManager;
  */
 public class AoShan extends Application {
 
-    public static boolean DEBUG = true;
+    public static final boolean DEBUG = true;
     public static final String TAG = AoShan.class.getSimpleName();
     public static final String MOBILE_MD5_SIGN = "j7dAuXMhpE76LRrETe8bTQ";
 
@@ -47,7 +47,6 @@ public class AoShan extends Application {
     public static final String sTempDirPath;
     public static final String sPicDirPath;
     public static String sDeviceId;
-    public static String sUMengChannel;
 
     public static final String SP_COLUMN_NEED_TO_UPDATE = "need_to_update";
     public static final String SP_COLUMN_FORCE_TO_UPDATE = "force_to_update";
@@ -128,12 +127,6 @@ public class AoShan extends Application {
                 sAppName = pi.applicationInfo.loadLabel(getPackageManager()).toString();
                 ApplicationInfo applicationInfo = pm.getApplicationInfo(getPackageName(), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT);
                 sApplicationLabel = pm.getApplicationLabel(applicationInfo).toString();
-                ApplicationInfo appInfo = pm.getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
-                sUMengChannel = appInfo.metaData.getString("UMENG_CHANNEL");
-                if (sUMengChannel == null || "".equals(sUMengChannel)) {
-                    sUMengChannel = String.valueOf(appInfo.metaData.getInt("UMENG_CHANNEL"));
-                }
-                DEBUG = appInfo.metaData.getBoolean("LOG");
                 sDebuggable = (applicationInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE) == ApplicationInfo.FLAG_DEBUGGABLE;
             } catch (PackageManager.NameNotFoundException e) {
                 if (DEBUG) {

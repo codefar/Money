@@ -49,11 +49,10 @@ public class FastJsonRequest<T> extends Request<T> {
         mHeaders.put("user-agent", "Android/" + AoShan.sVersionName
                 + " (" + AoShan.sPackageName + ";" + Build.VERSION.RELEASE + ";"
                 + AoShan.sScreenWidth + ";" + AoShan.sScreenHeight + ";" + Build.MANUFACTURER + ";" + Build.MODEL + ";"
-                + AoShan.sUMengChannel + ";" + AoShan.sVersionCode + ";" + Build.VERSION.SDK_INT + ")");
+                + AoShan.sVersionCode + ";" + Build.VERSION.SDK_INT + ")");
         URI uri = URI.create(mUrl);
         mHeaders.put("authToken", Md5Util.md5Hex(Constants.AUTH_TOKEN_SECRET_KEY + uri.getPath()));
         mHeaders.put("deviceId", AoShan.sDeviceId);
-        mHeaders.put("umeng_channel", AoShan.sUMengChannel);
         this.mListener = listener;
 
         setShouldCache(false);
